@@ -3,37 +3,54 @@
 This is an example application written in Ruby for
 introducing users to basic features of Travis CI.
 
-> This is a second portion of the guided tour of Travis CI.
+> This is the third portion of the guided tour of Travis CI.
 > If you haven't done so, please start with the
 > [initial stage](../../tree/01.intro).
 
-## Sign up for Travis CI
+## Initial look at the configuration
 
-After forking this repository, head over to [travis-ci.org](https://travis-ci.org).
-If you don't yet have a Travis CI account, you would be asked to
-authorize Travis CI to [access user data](https://docs.travis-ci.com/user/github-oauth-scopes).
+Having enabled Travis CI, it is time to run our first build.
 
-## Synchronize data
+Let us first check out the branch that has our initial configuration:
 
-The new repository needs to be visible to Travis CI.
+```sh-session
+$ git checkout 03.first_build
+$ cat .travis.yml
+```
 
-### You just signed up
+This file is very short:
 
-After initial signup, the user data (including what repositories your account has access to)
-are synchronized.
+```yaml
+language: ruby
+```
 
-### You already had a Travis CI account
+This tells Travis CI that we have a Ruby repository on our hands,
+and tells Travis CI to deal with it accordingly.
+In more concrete terms, it will make assumptions about which version
+of Ruby runtime to use, what commands to run, and so on.
 
-If you already have a Travis CI account, the new repository is probably not yet visible to
-Travis CI.
-It is time to manually initiate the synchronization at your
-[profile page](https://travis-ci.org/profile).
+> See the [Ruby reference page](https://docs.travis-ci.com/user/languages/ruby)
+> for more information.
 
-## Enable this repository on Travis CI
+## Triggering the initial build
 
-After synchronizing user data, `travis-intro-ruby` shows up in your list of repositories.
-You can search for it in the search field if it is not visible.
+It is time to trigger our first build.
+
+To trigger our first build, we need to push a new commit.
+
+```sh-session
+$ git commit --allow-empty -m "Empty commit to trigger the first Travis CI build"
+$ git push origin
+```
+
+Visit Travis CI page https://travis-ci.org/OWNER/travis-intro-ruby/builds
+to see the progress.
+
+## Observe the build result
+
+Unfortunately, the initial build will fail, because our code does not
+satisfy the assumptions that Travis CI makes about Ruby repositories.
 
 ## Next step
 
-Time to head on over to [the next step](../../tree/03.first_build).
+In [the next step](../../tree/04.customization), we will fix the build.
