@@ -31,4 +31,4 @@ $ ruby test/test_server.rb
 
 ## Next step
 
-Time to head on over to [the next step](/tree/02.signup).
+Time to head on over to [the next step](../../tree/02.signup).
