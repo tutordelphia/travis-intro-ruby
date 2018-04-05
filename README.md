@@ -3,32 +3,37 @@
 This is an example application written in Ruby for
 introducing users to basic features of Travis CI.
 
-## Fork, and look around
+> This is a second portion of the guided tour of Travis CI.
+> If you haven't done so, please start with the
+> [initial stage](../../tree/01.intro).
 
-First, [fork this repository](https://github.com/travis-ci/travis-intro-ruby/fork).
+## Sign up for Travis CI
 
-Clone to your local development machine, and have a look around.
+After forking this repository, head over to [travis-ci.org](https://travis-ci.org).
+If you don't yet have a Travis CI account, you would be asked to
+authorize Travis CI to [access user data](https://docs.travis-ci.com/user/github-oauth-scopes).
 
-```sh-session
-$ git clone https://github.com/OWNER/travis-intro-ruby.git
-$ cd travis-intro-ruby
-```
+## Synchronize data
 
-To start the server, run
+The new repository needs to be visible to Travis CI.
 
-```sh-session
-$ ruby lib/server.rb
-```
+### You just signed up
 
-If you visit [http://localhost:8000](http://localhost:8000), you should see
-a bare minimum web page.
+After initial signup, the user data (including what repositories your account has access to)
+are synchronized.
 
-You can confirm that the following runs our basic test, and passes:
+### You already had a Travis CI account
 
-```sh-session
-$ ruby test/test_server.rb
-```
+If you already have a Travis CI account, the new repository is probably not yet visible to
+Travis CI.
+It is time to manually initiate the synchronization at your
+[profile page](https://travis-ci.org/profile).
+
+## Enable this repository on Travis CI
+
+After synchronizing user data, `travis-intro-ruby` shows up in your list of repositories.
+You can search for it in the search field if it is not visible.
 
 ## Next step
 
-Time to head on over to [the next step](../../tree/02.signup).
+Time to head on over to [the next step](../../tree/03.first_build).
