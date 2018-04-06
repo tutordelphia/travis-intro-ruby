@@ -67,4 +67,4 @@ Now, your build can use the `GITHUB_OAUTH_TOKEN` in the build.
 
 ## Next step
 
-In [the grand finale](../../tree/05.deployment-pt2), we will push create a GitHub Release!
+In [the grand finale](../../tree/06.deployment-pt2), we will create a GitHub Release!
