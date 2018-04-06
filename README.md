@@ -42,4 +42,4 @@ The build passes now. Yes! 🎉
 
 ## Next step
 
-In [the next step](../../tree/05.deployment), we will fix the build.
+In [the next step](../../tree/05.deployment), we learn about deploying our code.
