@@ -3,54 +3,43 @@
 This is an example application written in Ruby for
 introducing users to basic features of Travis CI.
 
-> This is the third portion of the guided tour of Travis CI.
+> This is the fourth portion of the guided tour of Travis CI.
 > If you haven't done so, please start with the
 > [initial stage](../../tree/01.intro).
 
-## Initial look at the configuration
+## What went wrong?
 
-Having enabled Travis CI, it is time to run our first build.
+Our initial build failed, because the default configuration for
+Ruby did not work well.
 
-Let us first check out the branch that has our initial configuration:
+In particular, the default build step (`rake`) does not work, due
+to 	the absence of `Rakefile` in our repo.
 
-```sh-session
-$ git checkout 03.first_build
-$ cat .travis.yml
-```
+## Fixing the build
 
-This file is very short:
+We *could* write `Rakefile`, or we can override the `install` step
+in our configuration.
+
+Either is a valid option, but, here, we choose the latter.
+
+Edit `.travis.yml` to read:
 
 ```yaml
 language: ruby
+script: ruby test/test_server.rb # <== new
 ```
 
-This tells Travis CI that we have a Ruby repository on our hands,
-and tells Travis CI to deal with it accordingly.
-In more concrete terms, it will make assumptions about which version
-of Ruby runtime to use, what commands to run, and so on.
-
-> See the [Ruby reference page](https://docs.travis-ci.com/user/languages/ruby)
-> for more information.
-
-## Triggering the initial build
-
-It is time to trigger our first build.
-
-To trigger our first build, we need to push a new commit.
+Commit this change, and push to GitHub.
 
 ```sh-session
-$ git commit --allow-empty -m "Empty commit to trigger the first Travis CI build"
-$ git push origin
+$ git add .travis.yml
+$ git commit -m "Override script step"
 ```
 
-Visit Travis CI page https://travis-ci.org/OWNER/travis-intro-ruby/builds
-to see the progress.
+## Celebrate the passing build
 
-## Observe the build result
-
-Unfortunately, the initial build will fail, because our code does not
-satisfy the assumptions that Travis CI makes about Ruby repositories.
+The build passes now. Yes! 🎉
 
 ## Next step
 
-In [the next step](../../tree/04.customization), we will fix the build.
+In [the next step](../../tree/05.deployment), we will fix the build.
