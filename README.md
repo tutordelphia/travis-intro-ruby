@@ -11,7 +11,7 @@ introducing users to basic features of Travis CI.
 
 Having enabled Travis CI, it is time to run our first build.
 
-Let us first check out the branch that has our initial configuration:
+Let us take a look at our initial configuration:
 
 ```sh-session
 $ cat .travis.yml
