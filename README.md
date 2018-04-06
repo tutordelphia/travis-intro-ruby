@@ -34,6 +34,7 @@ Commit this change, and push to GitHub.
 ```sh-session
 $ git add .travis.yml
 $ git commit -m "Override script step"
+$ git push origin
 ```
 
 ## Celebrate the passing build
