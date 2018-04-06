@@ -14,7 +14,6 @@ Having enabled Travis CI, it is time to run our first build.
 Let us first check out the branch that has our initial configuration:
 
 ```sh-session
-$ git checkout 03.first_build
 $ cat .travis.yml
 ```
 
