@@ -29,6 +29,16 @@ You can confirm that the following runs our basic test, and passes:
 $ ruby test/test_server.rb
 ```
 
+## Checkout a new branch
+
+For the remainder of this Workshop, we will work on a different branch on our
+local machine, while following the instructions on GitHub.
+You can name our local branch anything you like; `default` is a fine choice:
+
+```sh-session
+$ git checkout -b default
+```
+
 ## Next step
 
 Time to head on over to [the next step](../../tree/02.signup).
