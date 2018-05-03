@@ -39,7 +39,7 @@ To trigger our first build, we need to push a new commit.
 
 ```sh-session
 $ git commit --allow-empty -m "Empty commit to trigger the first Travis CI build"
-$ git push origin
+$ git push --set-upstream origin default
 ```
 
 Visit Travis CI page https://travis-ci.org/OWNER/travis-intro-ruby/builds
