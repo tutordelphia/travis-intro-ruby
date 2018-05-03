@@ -39,7 +39,7 @@ You will interact with `dpl` by giving its configuration in the `deploy` key in
 Before setting up Travis CI for GitHub Releases, we need a special-purpose GitHub
 token that can create a release.
 
-Go to the [tokens](https://github.com/settings/tokens) page, and generate a new
+Go to the [tokens](https://github.com/settings/tokens/new?description=github-releases&scopes=public_repo) page, and generate a new
 token with `public_repo` scope.
 
 Copy this to your clipboard.
