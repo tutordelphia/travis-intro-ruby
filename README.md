@@ -9,31 +9,22 @@ introducing users to basic features of Travis CI.
 
 ## Sign up for Travis CI
 
-After forking this repository, head over to [travis-ci.org](https://travis-ci.org).
+After forking this repository, head over to [travis-ci.com](https://travis-ci.com).
 If you don't yet have a Travis CI account, you would be asked to
-authorize Travis CI to [access user data](https://docs.travis-ci.com/user/github-oauth-scopes).
+authorize Travis CI to access user data.
 
-## Synchronize data
+## Enable GitHub Apps Integration
 
-The new repository needs to be visible to Travis CI.
+Once you sign up for Travis CI, activate GitHub Apps Integration.
 
-### You just signed up
+## Install Travis CI
 
-After initial signup, the user data (including what repositories your account has access to)
-are synchronized.
-
-### You already had a Travis CI account
-
-If you already have a Travis CI account, the new repository is probably not yet visible to
-Travis CI.
-It is time to manually initiate the synchronization at your
-[profile page](https://travis-ci.org/profile).
-
-## Enable this repository on Travis CI
-
-After synchronizing user data, `travis-intro-ruby` shows up in your list of repositories.
-You can search for it in the search field if it is not visible.
+You can allow Travis CI to access all your repositories, or select few.
+For the purpose of this Workshop, we allow Travis CI to access only this repository.
+Click on the radio button "Only Select Repositories", and search for
+`travis-intro-ruby`.
+Select it, and click on "Approve and Install".
 
 ## Next step
 
-Time to head on over to [the next step](../../tree/03.first_build).
+You are now ready to run your [first build on Travis CI](../../tree/03.first_build).
